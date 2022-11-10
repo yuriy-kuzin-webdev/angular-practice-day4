@@ -8,8 +8,16 @@ import { ProductService } from './services/products.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+
+  //stream example
+  //products$: Observable<IProduct[]>
+
   constructor(private productsService: ProductService) {}
   ngOnInit(): void {
+
+    //stream example
+    //this.products$ = this.productsService.getAll()
+    
     this.loading = true;
     this.productsService.getAll().subscribe((products) => {
       this.products = products;
