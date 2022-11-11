@@ -25,4 +25,8 @@ export class ProductService {
     this.errorService.handle(err.message);
     return throwError(() => err.message);
   }
+
+  create(product:IProduct): Observable<IProduct>{
+    return this.http.post<IProduct>('https://fakestoreapi.com/products', product)
+  }
 }
