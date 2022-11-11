@@ -6,17 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { GloabalErrorComponent } from './components/gloabal-error/gloabal-error.component';
+import { FormsModule } from '@angular/forms';
+import { FilterProductsPipe } from './pipes/filter-products.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    GloabalErrorComponent
+    GloabalErrorComponent,
+    FilterProductsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
